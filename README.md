@@ -1,4 +1,6 @@
-# Emotion Detector - Final Project
+# Final Project
+
+**Project Name:** Final Project - Emotion Detector
 
 This application is an AI-based Web Application for Emotion Detection built using Python, Flask, and IBM Watson NLP. It analyzes user-provided text and identifies the scores for emotions: **anger**, **disgust**, **fear**, **joy**, and **sadness**, along with determining the **dominant emotion**.
 
@@ -15,8 +17,8 @@ This application is an AI-based Web Application for Emotion Detection built usin
 
 1. **Clone the repository**:
    ```bash
-   git clone <repository_url>
-   cd "course_era assignment"
+   git clone https://github.com/Ashansanjana/oaqjp-final-project-emb-ai.git
+   cd oaqjp-final-project-emb-ai
    ```
 
 2. **Install dependencies**:
