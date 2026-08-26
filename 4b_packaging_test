@@ -1,3 +1,7 @@
+theia@theia-dockers-ibm-labs-user:/home/project/final_project$ python3
+Python 3.8.10 (default, Mar 15 2022, 12:22:08) 
+[GCC 9.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
 >>> from EmotionDetection.emotion_detection import emotion_detector
->>> emotion_detector("I love this new technology")
-{'anger': 0.006275704, 'disgust': 0.002559816, 'fear': 0.009251525, 'joy': 0.9680386, 'sadness': 0.018970248, 'dominant_emotion': 'joy'}
+>>> emotion_detector("I am really angry about this")
+{'anger': 0.9680386, 'disgust': 0.002559816, 'fear': 0.009251525, 'joy': 0.006275704, 'sadness': 0.018970248, 'dominant_emotion': 'anger'}
