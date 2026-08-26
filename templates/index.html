@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Detector AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/mywebscript.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <span class="sparkle">✨</span> AI Emotion Detector
+            </div>
+            <p class="subtitle">Analyze emotions in real-time using Watson NLP</p>
+        </header>
+
+        <main class="card">
+            <div class="input-group">
+                <label for="textToAnalyze">Enter text to analyze:</label>
+                <textarea id="textToAnalyze" placeholder="Type or paste your text here (e.g., 'I am glad this happened')..." rows="4"></textarea>
+            </div>
+
+            <button id="runAnalysisBtn" onclick="RunSentimentAnalysis()" class="btn-primary">
+                Run Emotion Detection
+            </button>
+
+            <div id="system_response" class="response-box">
+                <div class="placeholder-text">Enter text above and click run to analyze emotions.</div>
+            </div>
+        </main>
+
+        <footer>
+            <p>IBM Backend Developer Capstone - Final Project</p>
+        </footer>
+    </div>
+</body>
+</html>
