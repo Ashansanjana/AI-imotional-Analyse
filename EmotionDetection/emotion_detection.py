@@ -4,12 +4,12 @@ Emotion Detection Module using IBM Watson NLP EmotionPredict API
 import requests
 import json
 
-def emotion_detector(text_to_analyze):
+def emotion_detector(text_to_analyse):
     """
     Analyzes the emotion of the input text using Watson NLP EmotionPredict API.
 
     Parameters:
-        text_to_analyze (str): The input text to be analyzed for emotions.
+        text_to_analyse (str): The input text to be analyzed for emotions.
 
     Returns:
         dict: A dictionary containing emotion scores for anger, disgust, fear, joy,
@@ -17,7 +17,7 @@ def emotion_detector(text_to_analyze):
               or status code is 400.
     """
     # Check for blank or empty text input (Task 7)
-    if not text_to_analyze or not text_to_analyze.strip():
+    if not text_to_analyse or not text_to_analyse.strip():
         return {
             'anger': None,
             'disgust': None,
@@ -29,7 +29,7 @@ def emotion_detector(text_to_analyze):
 
     url = 'https://sn-watson-emotion.labs.skills.network/v1/watson.runtime.nlp.v1/NlpService/EmotionPredict'
     headers = {"grpc-metadata-mm-model-id": "emotion_single_watson_nlp-1.8_cxx3770"}
-    myobj = {"raw_document": {"text": text_to_analyze}}
+    myobj = {"raw_document": {"text": text_to_analyse}}
 
     try:
         response = requests.post(url, json=myobj, headers=headers, timeout=1)
@@ -70,7 +70,7 @@ def emotion_detector(text_to_analyze):
 
     except (requests.exceptions.RequestException, KeyError, IndexError):
         # Local offline fallback for testing outside the Watson lab environment
-        text_lower = text_to_analyze.lower()
+        text_lower = text_to_analyse.lower()
         if 'glad' in text_lower or 'happy' in text_lower or 'joy' in text_lower:
             return {'anger': 0.01, 'disgust': 0.01, 'fear': 0.01, 'joy': 0.95, 'sadness': 0.01, 'dominant_emotion': 'joy'}
         if 'angry' in text_lower or 'mad' in text_lower:
